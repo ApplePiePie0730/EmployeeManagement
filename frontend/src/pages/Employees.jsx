@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axiosInstance from '../axiosConfig';
 import EmployeeList from '../components/EmployeeList';
+import EmployeeForm from '../components/EmployeeForm';
 import { useAuth } from '../context/AuthContext';
 
 const Employees = () => {
