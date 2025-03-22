@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const {addEmployee} = require("../controllers/employeeController");
+const {addEmployee, getAllEmployees} = require("../controllers/employeeController");
 const{protect} = require("../middleware/authMiddleware");
-const { model } = require("mongoose");
+
 
 router.post("/", protect, addEmployee);
-
-model.exports = router;
+router.get("/", protect, getAllEmployees);
+module.exports = router;
