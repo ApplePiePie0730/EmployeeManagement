@@ -27,6 +27,12 @@ const Employees = () => {
   return (
     <div className="container mx-auto p-6">
       <h1 className="text-2xl font-bold mb-4">Employee List</h1>
+      <EmployeeForm
+      employees={employees}
+      setEmployees={setEmployees}
+      editingEmployee={editingEmployee}
+      setEditingEmployee={setEditingEmployee}
+    />
       <EmployeeList
         employees={employees}
         setEmployees={setEmployees}
