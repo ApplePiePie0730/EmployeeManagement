@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 
-connectDB();
+
 
 app.use(cors());
 app.use(express.json());
@@ -20,7 +20,7 @@ app.use("/api/employees", employeeRoutes);
 
 // Export the app object for testing
 if (require.main === module) {
-    //connectDB();
+    connectDB();
     // If the file is run directly, start the server
     const PORT = process.env.PORT || 5001;
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
