@@ -70,13 +70,13 @@ Select a meaningful use case for your CRUD operations. We will provide the list,
 JIRA Project Board URL:  https://shelley0730.atlassian.net/jira/software/projects/EM/boards/67
 
 This project use GitHub Actions to set up CI/CD pipeline.
-**CI workflow:**
-*step 1: When code is pushed to the "main" branch, it will automatically run the workflow.
-*step 2: The workflow fetches the latest code from the repository into GitHub Actions runner.
-*step 3: Set up Node.js.
-*step 4: Load the Mongo_URL, JWT_SECRET, Port from GitHub Secrets.(Manually added it into Github Environments already)
-*step 5: Use "yarn" instead of "npm" to install dependencies.
-*step 6: Executes backend tests in the Test folder to verify functionality.
-**CD workflow:**
-*step 7: SSH into EC2 instance, and navigate to Backend directory, pull latest code and install dependencies, then restart Backend using pm2.
-*step 8: SSH into EC2 instance and navigate to the Frontend directory, remove the old build and install dependencies then rebuild the Frontend and restart Nginx.
+* **CI workflow:**  
+  * step 1: When code is pushed to the "main" branch, it will automatically run the workflow.    
+  * step 2: The workflow fetches the latest code from the repository into GitHub Actions runner.  
+  * step 3: Set up Node.js.  
+  * step 4: Load the Mongo_URL, JWT_SECRET, Port from GitHub Secrets.(Manually added it into Github Environments already)  
+  * step 5: Use "yarn" instead of "npm" to install dependencies.  
+  * step 6: Executes backend tests in the Test folder to verify functionality.  
+* **CD workflow:**  
+  * step 7: SSH into EC2 instance, and navigate to Backend directory, pull latest code and install dependencies, then restart Backend using pm2.  
+  * step 8: SSH into EC2 instance and navigate to the Frontend directory, remove the old build and install dependencies then rebuild the Frontend and restart Nginx.  
