@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black text-white p-4 flex justify-between items-center">
+    <nav className="bg-red-500 text-white p-4 flex justify-between items-center">
       <Link to="/" className="text-2xl font-bold">Employee Management</Link>
       <div>
         {user ? (
